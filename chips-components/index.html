@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chip components</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        :root{
+            --gray: #818181;
+            --purple: #6200ee;
+        }
+        .chips-wrapper{display:flex;flex-wrap: wrap;}
+        .chips-container{flex-basis: 750px;
+            margin: 48px auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            height: fit-content;}
+        .head{padding: 1rem;}
+        .tag-container{padding: 1rem; display: flex;flex-wrap: wrap;}
+        .tag{padding: 6px 1rem;
+            border-radius: 20px;
+            border: solid 1px black;
+            max-inline-size: fit-content;
+            margin: 5px;
+        
+        position: relative;
+    background-color: #f2f2f2;}
+        .tag i{font-size: 16px; margin-left: 5px;}
+        .tag-container input{flex-grow: 1;
+            border: 0; font-size: 16px;padding: 5px;outline: none;}
+
+        /*tag colors*/
+        .tag.primary{background-color: #3f51b5;
+            color: #fff;}
+        .tag.accent{background-color: #ff4081;
+            color: #fff;}
+        .tag.warn{background-color:#f44336;
+            color: #fff;}
+            /*stacked chips*/
+        .stacked-chips-container .tag-container{flex-direction: column;}
+        .stacked-chips-container .tag{max-width: 200px;width: 100%;}
+    </style>
+</head>
+<body>
+    <main class="chips-wrapper">
+        <!-- chips with input -->
+        <div class="chips-container">
+            <div class="head">
+                <h3>chips with input</h3>
+            </div>
+            <div class="tag-container">
+                <div class="tag"><span class="tag-item">js</span><i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="tag"><span class="tag-item">js</span><i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="tag"><span class="tag-item">js</span><i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <input/>
+            </div>
+        </div>
+
+        <!-- Basic chips -->
+        <div class="chips-container">
+            <div class="head">
+                <h3>Basic Chips</h3>
+            </div>
+            <div class="tag-container">
+                <div class="tag"><span class="tag-item">One fish</span>
+                </div>
+                <div class="tag"><span class="tag-item">Two fish
+                </span>
+                </div>
+                <div class="tag primary"><span class="tag-item">Primary fish
+                </span>
+                </div>
+                <div class="tag accent"><span class="tag-item">Accent fish
+                </span>
+                </div>
+                <input/>
+            </div>
+        </div>
+        <!-- Stacked chips -->
+        <div class="chips-container stacked-chips-container">
+            <div class="head">
+                <h3>Stacked Chips</h3>
+            </div>
+            <div class="tag-container">
+                <div class="tag"><span class="tag-item">none</span>
+                </div>
+                <div class="tag primary"><span class="tag-item primary">Primary
+                </span>
+                </div>
+                <div class="tag accent"><span class="tag-item accent">Accent
+                </span>
+                </div>
+                <div class="tag warn"><span class="tag-item">Warn
+                </span>
+                </div>
+                <input/>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
