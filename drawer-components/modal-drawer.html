@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawer components</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        :root{
+            --gray: #818181;
+            --purple: #6200ee;
+        }
+        button{background-color: unset;
+            border: unset;
+            color: unset;}
+        .perm-drawer-wrapper{display: flex;height: 100vh;}
+        /*side bar*/
+        .sidebar-nav{min-width:200px;height: 100%;border: solid 1px;color: rgba(0,0,0,.84);;}
+        .drawer-nav-list{display: flex;flex-direction: column;}
+        .nav-divider{width: 100%;}
+        .drawer-subtitle{color: rgba(0,0,0,0.6);}
+        .nav-list-item.active{color: var(--purple);background: rgba(98, 0, 238, 0.2);}
+        .drawer-header{padding: 1rem;}
+        .nav-list-item{padding: 1rem;}
+        .nav-list-item i{padding-right: 10px;}
+        /*main scr*/
+        .header{padding: 1rem;background-color: var(--purple);color:#fff;display: flex;}
+        .main{padding: 1rem;}
+        .sub-heading{padding-left: 1rem;}
+
+        /*modal-drawer*/
+        .header button{padding-right: 1rem;}
+        .modal-nav{position: fixed;
+            z-index: 6;
+            background-color: #fff;display: none;}
+        .modal-nav.active{display: block;}
+    </style>
+</head>
+<body>
+    <div class="perm-drawer-wrapper">
+        <aside id="side-nav" class="sidebar-nav modal-nav">
+            <div class="drawer-header">
+                <h3 class="drawer-title">Mail</h3>
+                <h6 class="drawer-subtitle">email@material.io</h6>
+            </div>
+            <div class="drawer-content">
+                <nav class="drawer-nav-list">
+                    <a class="nav-list-item active"><i class="fas fa-envelope-open-text"></i>Inbox</a>
+                    <a class="nav-list-item"><i class="fas fa-star"></i>Star</a>
+                    <a class="nav-list-item"><i class="fa fa-paper-plane" aria-hidden="true"></i>Sent Mail</a>
+                    <a class="nav-list-item"><i class="fa fa-envelope" aria-hidden="true"></i>Drafts</a>
+                    <hr class="nav-divider">
+                    <h6 class="drawer-subtitle sub-heading">Labels</h6>
+                    <a class="nav-list-item"><i class="fa fa-tag" aria-hidden="true"></i>Family</a>
+                    <a class="nav-list-item"><i class="fa fa-tag" aria-hidden="true"></i>Friends</a>
+                    <hr class="nav-divider">
+                    <a class="nav-list-item"><i class="fas fa-cog"></i>Settings</a>
+                    <a class="nav-list-item"><i class="fas fa-info"></i>Help & feedback</a>
+                </nav>
+            </div>
+        </aside>
+        <div class="main-scr">
+            <header class="header"><button id="menu-btn" class="menu-btn"><i class="fas fa-bars"></i></button><h2>Modal Drawer</h2></header>
+            <main class="main">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam reprehenderit ex et dolores ab non reiciendis repellendus doloribus, ipsam minima sapiente, vero soluta recusandae maiores asperiores cupiditate delectus odit qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, asperiores consequatur. Pariatur suscipit excepturi dolorem obcaecati placeat? Modi, cupiditate doloremque? Blanditiis error sit in saepe voluptatem nisi eius, mollitia similique.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas delectus inventore, eum tempore nobis laudantium iure autem unde magni, rem tempora quia quibusdam illum eaque deserunt. Molestias deleniti est velit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi amet tempore iusto omnis quam atque possimus corporis esse ad assumenda animi, ex soluta maxime. Fugiat nesciunt eaque quisquam assumenda laborum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, molestiae debitis at facere necessitatibus, architecto maxime tempore natus aliquam blanditiis voluptate deserunt! Voluptas molestiae voluptates cumque dolores commodi. Neque, dolorum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat illo voluptates recusandae sed, perspiciatis, harum porro dolore officia corrupti cumque consequatur ullam similique blanditiis modi itaque id voluptate. Id, culpa! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim consectetur expedita a labore ipsum. Ratione soluta, dolore ipsam voluptatem iusto, quo, ea repudiandae minus cum magnam explicabo est blanditiis tempore?    
+            </main>
+        </div>
+    </div>
+</body>
+<script>
+    const mainScr = document.querySelector('.main-scr');
+    const menuBtn = document.querySelector('#menu-btn');
+    const sideNav = document.querySelector('#side-nav');
+    menuBtn.addEventListener('click',function(){
+        sideNav.classList.toggle("active");
+    })
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Header Component </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        :root{
+            --gray: #818181;
+            --purple: #6200ee;
+        }
+        button{background-color: unset;
+            border: unset;
+            color: unset;}
+        .std-hd-wrapper{height: 200vh;position: relative;}
+        .header{padding: 1rem;background-color: var(--purple);color:#fff;display: flex;}
+        .header button{padding-right: 1rem;}
+        .header .sec-left, .header .sec-right{display: flex;}
+        .header .sec-right{margin-left: auto;}
+        button i{vertical-align: text-bottom;}
+        .main{padding: 1rem; padding-top: 70px;}
+
+        /*fixed header*/
+        .fixed-header{position: fixed;
+            width: 100%;}
+        .header.short-header{width: 25rem;
+            border-bottom-right-radius: 1.5rem;}    
+    </style>
+</head>
+<body>
+    <div class="std-hd-wrapper">
+        <header class="fixed-header header short-header">
+            <section class="sec-left">
+                <button id="menu-btn" class="menu-btn"><i class="fas fa-bars"></i></button>
+                <h2>Short</h2>
+            </section>
+            <section class="sec-right">
+                <button><i class="fa fa-download" aria-hidden="true"></i></button>
+                <button><i class="fa fa-print" aria-hidden="true"></i></button>
+                <button><i class="fas fa-bookmark"></i></button>
+            </section>
+        </header>
+        <main class="main">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quis alias ad nesciunt fugiat, hic animi pariatur id nobis, eum culpa ullam unde in modi, maxime amet iure quod minima! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia provident beatae temporibus repellendus facere omnis voluptate asperiores, veritatis iusto! A accusamus vitae odio tempore, in corporis aliquid animi dolor quasi! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda temporibus quo consectetur laboriosam est, suscipit accusamus maiores doloribus consequatur velit, praesentium saepe, deserunt quas cumque debitis odit quaerat tempora sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ipsa, laudantium nemo eius quaerat a commodi. Quo eligendi cum recusandae quaerat praesentium culpa, adipisci explicabo doloremque autem ad! Illum, mollitia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam similique nesciunt eum sint eligendi praesentium cupiditate minus accusamus modi facilis itaque ea quo, numquam, maxime adipisci saepe necessitatibus pariatur impedit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur assumenda delectus possimus ex molestiae, rem ullam voluptate non quisquam deleniti reiciendis soluta ducimus molestias tempore quaerat! Iste assumenda illo officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempore iusto omnis! Quaerat obcaecati similique, totam dolore laudantium laborum exercitationem consequatur aperiam molestias sint saepe minus maiores ad sit voluptates. 
+        </main>
+    </div>
+    
+</body>
+</html>
